@@ -1,0 +1,4 @@
+# app/code
+app/code/local/Versedi/NewProductAuto            app/code/local/Versedi/NewProductAuto
+# app/etc
+app/etc/modules/Versedi_NewProductAuto.xml            app/etc/modules/Versedi_NewProductAuto.xml

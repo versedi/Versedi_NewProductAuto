@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Versedi_NewProductAuto>
+            <version>0.1.0</version>
+        </Versedi_NewProductAuto>
+    </modules>
+    <global>
+        <models>
+            <versedi_newproductauto>
+                <class>Versedi_NewProductAuto_Model</class>
+            </versedi_newproductauto>
+        </models>
+        <helpers>
+            <versedi_newproductauto>
+                <class>Versedi_NewProductAuto_Helper</class>
+            </versedi_newproductauto>
+        </helpers>
+        <events>
+            <catalog_product_save_before><!-- name of the event that we're catching/hooking -->
+                <observers>
+                    <versedi_newproductauto_handler> <!-- name of the observer -->
+                        <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+                        <class>Versedi_NewProductAuto_Model_Observer</class><!-- name of observer's class -->
+                        <method>setProductNewFromDateToday</method> <!-- name of the function in observer that we're calling when the event is fired -->
+                        <args />
+                    </versedi_newproductauto_handler>
+                </observers>
+            </catalog_product_save_before>
+        </events>
+    </global>
+</config>
